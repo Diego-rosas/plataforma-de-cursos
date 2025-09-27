@@ -163,7 +163,8 @@ while(opcao != "4") {
                 case "1": 
                     break;
                 case "2":
-                    let nome = entrada("Digite o seu nomme: ");
+                    console.log("----- Cadastro de professores: -------");
+                    let nome = entrada("Digite o seu nome: ");
                     let materia = entrada("Digite a materia que vai ensinar: ");
                     let professor = new Professor(nome, materia);
                     professor.cadastraProfessor(professor);
@@ -179,6 +180,7 @@ while(opcao != "4") {
                     console.log("Senha: ");    
                     break;
                 case "2":
+                    console.log("----- Cadastro de alunos: -------");
                     let nome = entrada("Digite o seu nome: ");
                     let idade = entrada("Digite a sua idade: ");
                     let ocupacao = entrada("Digite a sua ocupação: ");
