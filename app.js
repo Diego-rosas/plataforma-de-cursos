@@ -88,3 +88,29 @@ class Aluno {
     }
 
 }
+
+class Professor{
+    constructor(nome, materia) {
+        this.nome = nome;
+        this.materia = materia;
+        this.professores = [];
+    }
+
+    menuProfessor(){
+        
+    }
+    cadastraProfessor(professor) {
+        this.professores.push(professor);
+        console.log(`Professor ${professor.nome} adicionado ao sistema!`);
+    }
+
+    listaProfessores(){
+        console.log("Lista de professores cadastrados:  ");
+        for (const professor of this.professores) {
+            console.log(`Nome: ${professor.nome}`);
+            console.log(`Matéria: ${professor.materia}`);
+        }
+        console.log("-------------------------------------------------------");
+    }
+
+}
