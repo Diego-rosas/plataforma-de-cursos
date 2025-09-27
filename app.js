@@ -96,9 +96,6 @@ class Professor{
         this.professores = [];
     }
 
-    menuProfessor(){
-        
-    }
     cadastraProfessor(professor) {
         this.professores.push(professor);
         console.log(`Professor ${professor.nome} adicionado ao sistema!`);
@@ -168,7 +165,7 @@ while(opcao != "4") {
                 case "2":
                     let nome = entrada("Digite o seu nomme: ");
                     let materia = entrada("Digite a materia que vai ensinar: ");
-                    let professor = new Projessor(nome, materia);
+                    let professor = new Professor(nome, materia);
                     professor.cadastraProfessor(professor);
                     break;
             }       
