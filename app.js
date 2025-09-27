@@ -1,6 +1,6 @@
 //Atividade (fases da Engenharia de Software)
 /*Equipe Escrum: Diego(Scrum Master)
-                 Kerolayne(Product Oner)
+                 Karolaynin(Product Oner)
                  Márcio
                  Sotero
 */ 
@@ -133,65 +133,101 @@ function mostaMenu() {
     console.log("              PLATAFORMA DE CURSOS ON-LINE EAD!                 ");
     console.log("---------------------------------------------------------------");
     console.log("     Menu Principal:   ");
-    console.log("Quem é você? ");
     console.log("1. Professor");
     console.log("2. Aluno");
-    console.log("3. Mostrar Infomações");
-    console.log("4. Sair");
+    console.log("3. Sair");
     console.log("---------------------------------------------------------------");
+}
+
+function menuProfessor() {
+    let opcaoProfessor = "";
+    while(opcaoProfessor != "3") {
+
+        if(opcaoProfessor == "3"){ 
+            break;
+        }
+
+        console.log("Menu Professores: ");
+        console.log("1. Login");
+        console.log("2. Cadastro");
+        console.log("3. Sair");
+
+        opcaoProfessor = entrada("O que deseja fazer: "); 
+
+        switch (opcaoProfessor){  
+            case "1": 
+                console.log("Usuário: ");
+                console.log("Senha: "); 
+                console.log("\n------------------------------------------------------------");
+                break;
+            case "2":
+                console.log("----- Cadastro de professores: -------");
+                let nome = entrada("Digite o seu nome: ");
+                let materia = entrada("Digite a materia que vai ensinar: ");
+                let professor = new Professor(nome, materia);
+                professor.cadastraProfessor(professor);
+                console.log("\n------------------------------------------------------------");
+                break;
+        }       
+    } 
+}
+
+function menuAluno() {
+    let opcaoAluno = "";
+    while(opcaoAluno != "3") {
+
+        if(opcaoAluno == "3"){ 
+            break;
+        }
+
+        console.log("Menu Alunos: ");
+        console.log("1. Login");
+        console.log("2. Cadastro");
+        console.log("3. Sair");
+
+        opcaoAluno = entrada("O que deseja fazer: "); 
+
+        switch (opcaoAluno){  
+        case "1":
+            console.log("Usuário: ");
+            console.log("Senha: ");  
+            console.log("\n------------------------------------------------------------");
+            break;
+        case "2":
+            console.log("----- Cadastro de alunos: -------");
+            let nome = entrada("Digite o seu nome: ");
+            let idade = entrada("Digite a sua idade: ");
+            let ocupacao = entrada("Digite a sua ocupação: ");
+            let aluno = new Aluno(nome, idade, ocupacao);
+            aluno.cadastraAluno(aluno);
+            aluno.testeClassificacao();
+            aluno.classificaAluno();
+            console.log("\n------------------------------------------------------------");
+            break;
+        }       
+    } 
 }
 
 let opcao = ""; 
 
+while(opcao != "3") { //Laço principal
+    mostaMenu(); // Menu principal
 
-while(opcao != "4") { 
-    mostaMenu();
+    opcao = entrada("Quem é você? ");
 
-    opcao = entrada("Digite a opção desejada: "); 
-
-    if(opcao == "4"){ 
+    if(opcao == "3"){ 
         console.log("Programa encerrado!")
         break;
     }
 
     switch (opcao){  
         case "1":
-            console.log("1. Login");
-            console.log("2. Cadastro");
-            let opcaoProfessor = entrada("O que deseja fazer: "); 
-            switch (opcaoProfessor){  
-                case "1": 
-                    break;
-                case "2":
-                    console.log("----- Cadastro de professores: -------");
-                    let nome = entrada("Digite o seu nome: ");
-                    let materia = entrada("Digite a materia que vai ensinar: ");
-                    let professor = new Professor(nome, materia);
-                    professor.cadastraProfessor(professor);
-                    break;
-            }       
+            menuProfessor();
+            console.clear();
+            break;
         case "2":
-            console.log("1. Login");
-            console.log("2. Cadastro");
-            let opcaoAluno = entrada("O que deseja fazer: ");   
-            switch (opcaoAluno){  
-                case "1":
-                    console.log("Usuário: ");
-                    console.log("Senha: ");    
-                    break;
-                case "2":
-                    console.log("----- Cadastro de alunos: -------");
-                    let nome = entrada("Digite o seu nome: ");
-                    let idade = entrada("Digite a sua idade: ");
-                    let ocupacao = entrada("Digite a sua ocupação: ");
-                    let aluno = new Aluno(nome, idade, ocupacao);
-                    aluno.cadastraAluno(aluno);
-                    aluno.testeClassificacao();
-                    aluno.classificaAluno();
-                    break;
-            }
-        case "3":
-            //professor.listaProfessores();
+            menuAluno();
+            console.clear();
             break;
         default:
             console.log("Opção inválida!")
