@@ -17,11 +17,6 @@
   4) Sistema de Controle de Estoque
   5) Aplicativo de Saúde e Bem-Estar
 
-
-
-
-### Enunciado:
-
 ### Classe e Métodos criados:
 
 ### Resultado:
