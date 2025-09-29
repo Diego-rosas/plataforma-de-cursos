@@ -17,7 +17,17 @@
   4) Sistema de Controle de Estoque
   5) Aplicativo de Saúde e Bem-Estar
 
-### Classe e Métodos criados:
+### Classes, Métodos e Funções criadas:
+<img width="483" height="636" alt="image" src="https://github.com/user-attachments/assets/d2cc64da-6d76-4da5-b490-a7bafb2b5c1a" />
 
 ### Resultado:
+- Parte 1:
+<img width="779" height="781" alt="image" src="https://github.com/user-attachments/assets/75dc5b80-6fb2-4977-b42f-bde43f38f0a4" />
+
+- Parte 2:
+<img width="768" height="855" alt="image" src="https://github.com/user-attachments/assets/73b6e11c-932d-4748-b440-633eb34d15c8" />
+
+
+
+
 
