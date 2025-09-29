@@ -23,6 +23,7 @@ class Aluno {
     cadastraAluno(aluno) {
         this.alunos.push(aluno);
         console.log(`Aluno ${aluno.nome} adicionado ao sistema!`);
+        console.log(".....................................................................");
     }
 
     exibeInfoAlunos() {
@@ -129,14 +130,16 @@ class Curso{
 }
 
 function mostaMenu() { 
-    console.log("\n------------------------------------------------------------");
-    console.log("              PLATAFORMA DE CURSOS ON-LINE EAD!                 ");
-    console.log("---------------------------------------------------------------");
+    console.log("\n--------------------------------------------------------------------");
+    console.log("              PLATAFORMA DE CURSOS ON-LINE EAD!                     ");
+    console.log("--------------------------------------------------------------------");
     console.log("     Menu Principal:   ");
     console.log("1. Professor");
     console.log("2. Aluno");
     console.log("3. Sair");
-    console.log("---------------------------------------------------------------");
+    console.log(".....................................................................");
+
+
 }
 
 function menuProfessor() {
@@ -151,14 +154,16 @@ function menuProfessor() {
         console.log("1. Login");
         console.log("2. Cadastro");
         console.log("3. Sair");
+        console.log(".....................................................................");
 
         opcaoProfessor = entrada("O que deseja fazer: "); 
+        console.log(".....................................................................");
 
         switch (opcaoProfessor){  
             case "1": 
                 console.log("Usuário: ");
                 console.log("Senha: "); 
-                console.log("\n------------------------------------------------------------");
+                console.log("--------------------------------------------------------------------");
                 break;
             case "2":
                 console.log("----- Cadastro de professores: -------");
@@ -184,25 +189,31 @@ function menuAluno() {
         console.log("1. Login");
         console.log("2. Cadastro");
         console.log("3. Sair");
+        console.log(".....................................................................");
+
 
         opcaoAluno = entrada("O que deseja fazer: "); 
+        console.log(".....................................................................");
+
 
         switch (opcaoAluno){  
         case "1":
             console.log("Usuário: ");
             console.log("Senha: ");  
-            console.log("\n------------------------------------------------------------");
+            console.log("---------------------------------------------------------------------");
             break;
         case "2":
-            console.log("----- Cadastro de alunos: -------");
+            console.log("Cadastro de alunos: ");
             let nome = entrada("Digite o seu nome: ");
             let idade = entrada("Digite a sua idade: ");
             let ocupacao = entrada("Digite a sua ocupação: ");
+            console.log(".....................................................................");
+
             let aluno = new Aluno(nome, idade, ocupacao);
             aluno.cadastraAluno(aluno);
             aluno.testeClassificacao();
             aluno.classificaAluno();
-            console.log("\n------------------------------------------------------------");
+            console.log("\n-------------------------------------------------------------------");
             break;
         }       
     } 
@@ -214,6 +225,9 @@ while(opcao != "3") { //Laço principal
     mostaMenu(); // Menu principal
 
     opcao = entrada("Quem é você? ");
+    console.log(".....................................................................");
+
+
 
     if(opcao == "3"){ 
         console.log("Programa encerrado!")
